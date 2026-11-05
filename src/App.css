@@ -1,0 +1,157 @@
+:root {
+    --navy: #25318f;
+    --blue: #3141ef;
+    --sky: #4bb3fd;
+    --white: #f9f9ee;
+    --orange: #ff6b35;
+    --black: #2f3f2f;
+    --grey: #b4b4ae;
+    --light-grey: #ebebe2;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("./assets/fonts/Montserrat-VariableFontwght.woff2") format("woff"),
+        url("./assets/fonts/Montserrat-VariableFontwght.woff") format("woff"),
+        url("./assets/fonts/Montserrat-VariableFont_wght.ttf") format(truetype);
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src:
+        url("./assets/fonts/OpenSans-VariableFontwdthwght.woff2") format("woff2"),
+        url("./assets/fonts/OpenSans-VariableFontwdthwght.woff") format("woff"),
+        url("./assets/fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Lora";
+    src:
+        url("./assets/fonts/Lora-VariableFontwght.woff2") format("woff2"),
+        url("./assets/fonts/Lora-VariableFontwght.woff") format("woff"),
+        url("./assets/fonts/Lora-VariableFont_wght.ttf") format("truetype");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+    /* padding: 1vh 2vw; */
+}
+
+#root {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+}
+
+button {
+    background-color: var(--orange);
+    border: none;
+    color: var(--white);
+    font-weight: 700;
+}
+
+h1,
+h2 {
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+h2 {
+    color: var(--navy);
+    font-weight: 700;
+}
+
+form {
+    color: var(--black);
+    font-weight: 400;
+}
+
+form,
+button,
+.cv-document p {
+    font-family: "Open Sans", sans-serif;
+}
+input,
+textarea {
+    border: solid var(--grey) 2px;
+    border-radius: 5px;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    grid-area: header;
+}
+
+.img-btn {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    width: 3.5rem;
+}
+
+.left-panel {
+    display: grid;
+    grid-template-columns: 4vw 1fr 4vw;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "header header header"
+        "prev form next";
+    align-items: center;
+    column-gap: 2rem;
+    padding: 3vh 3vw;
+}
+
+.prev-btn {
+    grid-area: prev;
+}
+
+.next-btn {
+    grid-area: next;
+}
+
+.form-content {
+    grid-area: form;
+}
+
+.cv-document {
+    aspect-ratio: 70 / 99;
+    background-color: white;
+    height: 85vh;
+    border: solid 2px var(--grey);
+    padding: 3rem;
+}
+
+.cv-document h1 {
+    text-align: center;
+}
+
+.cv-document h1,
+.cv-document h2 {
+    font-family: "Lora", "Times New Roman", Times, serif;
+    font-weight: 500;
+}
+
+.left-panel,
+.right-panel {
+    min-height: 100vh;
+}
+
+.right-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-grey);
+}
